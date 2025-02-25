@@ -1,0 +1,62 @@
+.hotel-search-results {
+    background: #fff3e0; /* Light orange background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 165, 0, 0.1); /* Orange shadow */
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .hotel-search-results h2 {
+    color: #ff4500; /* Orange heading */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .hotel-search-results p {
+    margin: 5px 0;
+    color: #777;
+  }
+  
+  .hotel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .hotel-item {
+    background: #fff;
+    border: 1px solid #ffe4b5; /* Light orange border */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(255, 165, 0, 0.1); /* Subtle orange shadow */
+  }
+  
+  .hotel-item h3 {
+    color: #ff4500; /* Orange hotel name */
+    margin: 0;
+  }
+  
+  .hotel-item p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .book-btn {
+    background: #ff4500; /* Orange button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .book-btn:hover {
+    background: #cc3700; /* Darker orange on hover */
+  }

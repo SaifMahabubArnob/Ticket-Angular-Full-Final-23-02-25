@@ -1,0 +1,41 @@
+<div class="search-container">
+    <!-- Navigation Tabs -->
+    <div class="tab-container">
+        <button class="tab" [class.active]="selectedTab === 'bus'" (click)="selectTab('bus')">🚌 BUS</button>
+        <button class="tab" [class.active]="selectedTab === 'air'" (click)="selectTab('air')">✈️ AIR</button>
+        <button class="tab" [class.active]="selectedTab === 'ship'" (click)="selectTab('ship')">⛴️ SHIP</button>
+        <button class="tab" [class.active]="selectedTab === 'hotel'" (click)="selectTab('hotel')">🏨 HOTEL</button>
+    </div>
+
+    <!-- Search Form -->
+    <div class="search-form">
+        <!-- Common Fields -->
+        <div class="input-group" *ngIf="selectedTab !== 'hotel'">
+            <label>GOING FROM</label>
+            <input type="text" [(ngModel)]="fromPlace" placeholder="Enter location" [class.error]="!fromPlace && isSubmitted">
+        </div>
+        <div class="input-group">
+            <label>{{ selectedTab === 'hotel' ? 'LOCATION' : 'GOING TO' }}</label>
+            <input type="text" [(ngModel)]="toPlace" placeholder="{{ selectedTab === 'hotel' ? 'Enter city or area' : 'Enter destination' }}" [class.error]="!toPlace && isSubmitted">
+        </div>
+        <div class="input-group">
+            <label>{{ selectedTab === 'hotel' ? 'CHECK-IN DATE' : 'JOURNEY DATE' }}</label>
+            <input type="date" [(ngModel)]="journeyDate" [class.error]="!journeyDate && isSubmitted">
+        </div>
+        <div class="input-group" *ngIf="selectedTab === 'hotel' || selectedTab !== 'hotel'">
+            <label>{{ selectedTab === 'hotel' ? 'CHECK-OUT DATE' : 'RETURN DATE' }}</label>
+            <input type="date" [(ngModel)]="returnDate" [class.error]="!returnDate && isSubmitted">
+        </div>
+
+        <button class="search-btn" (click)="search()">Search {{ selectedTab | titlecase }}</button>
+    </div>
+
+    <!-- Trending Searches -->
+    <div class="trending">
+        <p>Trending Searches:</p>
+        <span>Dhaka → Rajshahi</span>
+        <span>Dhaka → Barisal</span>
+        <span>Dhaka → Cox's Bazar</span>
+        <span>Dhaka → Chittagong</span>
+    </div>
+</div>

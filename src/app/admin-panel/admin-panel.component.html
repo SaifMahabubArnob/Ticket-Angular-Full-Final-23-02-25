@@ -1,0 +1,33 @@
+<div class="admin-panel-container">
+    <h2>Admin Panel - Booking List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Bus Name</th>
+          <th>Departure</th>
+          <th>Arrival</th>
+          <th>Total Fare</th>
+          <th>Passenger Name</th>
+          <th>Mobile Number</th>
+          <th>Email</th>
+          <th>Selected Seats</th>
+          <th>Booking Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ booking.busName }}</td>
+          <td>{{ booking.departure }}</td>
+          <td>{{ booking.arrival }}</td>
+          <td>${{ booking.totalFare }}</td>
+          <td>{{ booking.firstName }} {{ booking.lastName }}</td>
+          <td>{{ booking.mobileNumber }}</td>
+          <td>{{ booking.email }}</td>
+          <td>{{ booking.selectedSeats }}</td>
+          <td>{{ booking.bookingDate | date:'medium' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

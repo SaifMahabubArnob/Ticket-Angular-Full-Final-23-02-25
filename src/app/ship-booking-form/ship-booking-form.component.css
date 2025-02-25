@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-size: cover; /* ব্যাকগ্রাউন্ড ছবি পুরো কার্ডে বসবে */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* লেখা সাদা রাখলাম যেন ছবি ভালোভাবে দেখা যায় */
+}
+
+.card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* প্রতিটি কার্ডের জন্য আলাদা ব্যাকগ্রাউন্ড ছবি */
+.card:nth-child(1) {
+    background-image: url('/assets/images/download.jpg');
+}
+
+.card:nth-child(2) {
+    background-image: url('/assets/images/images (4).jpg');
+}
+
+.card:nth-child(3) {
+    background-image: url('/assets/images/images.jpg');
+}
+
+.card:nth-child(4) {
+    background-image: url('/assets/images/nature-sea-water-turquoise-wallpaper-preview.jpg');
+}
+
+.card:nth-child(5) {
+    background-image: url('/assets/images/images - Copy2.jpg');
+}
+
+
+.card .details {
+    flex: 3;
+    background: rgba(0, 0, 0, 0.5); /* হালকা কালো ব্যাকগ্রাউন্ড যেন লেখা দেখা যায় */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card .details h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #ffd700; /* গোল্ডেন রঙ */
+}
+
+.card .details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.card .time-info, 
+.card .seat-info {
+    flex: 1;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card .time-info p,
+.card .seat-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: white;
+}
+
+.card .price-info {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.card .actions {
+    flex: 1;
+    text-align: center;
+}
+
+.card .actions button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.card .actions button:hover {
+    background-color: #c9302c;
+}
+
+.card .actions a {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #ffd700;
+    text-decoration: underline;
+}

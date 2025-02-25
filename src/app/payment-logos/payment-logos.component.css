@@ -1,0 +1,13 @@
+.payment-logos {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .payment-logo img {
+    width: 80%; /* ইমেজের প্রস্থ ৮০% */
+    height: auto; /* উচ্চতা স্বয়ংক্রিয়ভাবে সামঞ্জস্য হবে */
+    max-width: 1000px; /* সর্বোচ্চ প্রস্থ ১০০০ পিক্সেল */
+    border-radius: 5px;
+  }
+  

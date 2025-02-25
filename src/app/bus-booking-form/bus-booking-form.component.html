@@ -1,0 +1,86 @@
+<div class="container">
+    <div id="bus" class="form-container" style="display: block;">
+      <h2>Book a Bus</h2>
+      <form id="busForm" [formGroup]="bookingData" (submit)="onSubmit()" method="post">
+        <!-- From and To Location -->
+        <select formControlName="fromLocation" required>
+          <option value="">Select Starting Location</option>
+          <option value="Dhaka">Dhaka</option>
+          <option value="Chittagong">Chittagong</option>
+          <option value="Sylhet">Sylhet</option>
+        </select>
+        <select formControlName="toLocation" required>
+          <option value="">Select Destination</option>
+          <option value="Dhaka">Dhaka</option>
+          <option value="Chittagong">Chittagong</option>
+          <option value="Sylhet">Sylhet</option>
+        </select>
+  
+        <!-- Journey Details -->
+        <input type="date" formControlName="journeyDate" required>
+        <input type="time" formControlName="journeyTime" required>
+        <input
+          type="number"
+          formControlName="seats"
+          placeholder="Number of Seats"
+          min="1"
+          required
+          (input)="calculateFare()"
+        >
+  
+        <!-- Class Selection -->
+        <select formControlName="busClass" required (change)="calculateFare()">
+          <option value="">Select Bus Class</option>
+          <option value="AC">AC</option>
+          <option value="Non-AC">Non-AC</option>
+          <option value="Sleeper">Sleeper</option>
+        </select>
+  
+        <!-- Passenger Details -->
+        <input type="text" formControlName="passengerName" placeholder="Passenger's Name" required>
+        <input type="tel" formControlName="phone" placeholder="Phone Number" required>
+        <input type="email" formControlName="email" placeholder="Email Address" required>
+  
+        <!-- Age Group -->
+        <select formControlName="ageGroup" required>
+          <option value="">Select Age Group</option>
+          <option value="child">Child</option>
+          <option value="adult">Adult</option>
+          <option value="senior">Senior</option>
+        </select>
+  
+        <!-- Discount Code -->
+        <input
+          type="text"
+          formControlName="discountCode"
+          placeholder="Discount Code"
+          (input)="calculateFare()"
+        >
+        <p>Discount: {{ discount }} BDT</p>
+  
+        <!-- Terms and Conditions -->
+        <label>
+          <input type="checkbox" formControlName="terms" required> I agree to the <a href="/terms">terms and conditions</a>.
+        </label>
+  
+        <!-- Round Trip Return Date -->
+        <div id="returnDateContainer" *ngIf="bookingData.get('tripType')?.value === 'round-trip'">
+          <input type="date" formControlName="returnDate" placeholder="Return Date">
+          <input type="time" formControlName="returnTime" placeholder="Return Time">
+        </div>
+  
+        <!-- Trip Type -->
+        <label>
+          <input type="radio" formControlName="tripType" value="one-way" checked> One-way
+        </label>
+        <label>
+          <input type="radio" formControlName="tripType" value="round-trip"> Round-trip
+        </label>
+  
+        <!-- Price Estimation -->
+        <p>Estimated Fare: {{ estimatedFare }} BDT</p>
+  
+        <button type="submit" id="searchBusButton">Book Bus</button>
+      </form>
+    </div>
+  </div>

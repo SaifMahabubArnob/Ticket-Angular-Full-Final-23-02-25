@@ -1,0 +1,44 @@
+<div class="flight-list">
+    <h2>Available Flights</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Trip Type</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Journey Date</th>
+          <th>Return Date</th>
+          <th>Arrival Time</th>
+          <th>Passenger Type</th>
+          <th>Meal Preference </th>
+          <th>Passenger Count</th>
+          <th>Insurance</th>
+          <th>Airline</th>
+          <th>Class Type</th>
+          <th>Coupon</th>
+          <th>Price</th>
+          <th>Payment Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let flight of flights">
+          <td>{{ flight.tripType }}</td>
+          <td>{{ flight.fromLocation }}</td>
+          <td>{{ flight.toLocation }}</td>
+          <td>{{ flight.journeyDate }}</td>
+          <td>{{ flight.returnDate || 'N/A' }}</td>
+          <td>{{ flight.arrivalTime }}</td>
+          <td>{{ flight.passengerType }}</td>
+          <td>{{ flight.mealPreference }}</td>
+          <td>{{ flight.passengerCount }}</td>
+          <td>{{ flight.insurance }}</td>
+          <td>{{ flight.airline }}</td>
+          <td>{{ flight.classType }}</td>
+          <td>{{ flight.couponCode }}</td>
+          <td>${{ flight.ticketPrice }}</td>
+          <td>{{ flight.paymentMethod }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

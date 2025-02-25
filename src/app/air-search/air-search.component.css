@@ -1,0 +1,62 @@
+.air-search-results {
+    background: #f0f8ff; /* Light blue background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 255, 0.1); /* Blue shadow */
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .air-search-results h2 {
+    color: #0000ff; /* Blue heading */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .air-search-results p {
+    margin: 5px 0;
+    color: #777;
+  }
+  
+  .flight-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .flight-item {
+    background: #fff;
+    border: 1px solid #d1e7fd; /* Light blue border */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 255, 0.1); /* Subtle blue shadow */
+  }
+  
+  .flight-item h3 {
+    color: #0000ff; /* Blue flight name */
+    margin: 0;
+  }
+  
+  .flight-item p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .book-btn {
+    background: #0000ff; /* Blue button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .book-btn:hover {
+    background: #0000cc; /* Darker blue on hover */
+  }

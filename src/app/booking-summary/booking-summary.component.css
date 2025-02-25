@@ -1,0 +1,88 @@
+/* General Container Styling */
+.booking-summary-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Heading Styling */
+  h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Paragraph Styling */
+  p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555555;
+  }
+  
+  /* Strong Tags Styling */
+  strong {
+    color: #333333;
+    font-weight: bold;
+  }
+  
+  /* Highlighting Key Information */
+  p strong {
+    color: #007bff; /* Blue color for key details */
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .booking-summary-container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Selected Seats Styling */
+  p strong.selected-seats {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #28a745; /* Green color for seats */
+  }
+  
+  /* Buttons (if needed in the future) */
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Divider Line (Optional) */
+  hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+  }

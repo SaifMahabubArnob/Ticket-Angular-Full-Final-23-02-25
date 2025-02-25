@@ -1,0 +1,128 @@
+/* Footer Section - Premium Dark Mode */
+.footer {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d); /* Futuristic Gradient */
+    color: #ffffff;
+    padding: 10px 0; /* Height আরও কমানোর জন্য প্যাডিং কমানো হয়েছে */
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-top: 2px solid rgba(255, 255, 255, 0.1); /* Thin futuristic border */
+}
+
+/* Footer Columns */
+.footer .footer-left, 
+.footer .footer-center, 
+.footer .footer-right {
+    width: 30%;
+    text-align: left;
+    padding: 10px; /* Footer কলামের প্যাডিং কমানো হয়েছে */
+}
+
+/* Hover Effect */
+.footer .footer-left:hover,
+.footer .footer-center:hover,
+.footer .footer-right:hover {
+    transform: translateY(-5px); /* Slight floating effect */
+}
+
+/* Logo */
+.footer .footer-left .logo img {
+    width: 120px;
+    height: auto;
+    filter: brightness(1.2); /* Bright logo effect */
+}
+
+/* Footer Description */
+.footer p {
+    font-size: 15px;
+    margin: 10px 0; /* Margin কমানো হয়েছে */
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer Links - Modern Style */
+.footer .footer-links a {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin: 5px 0; /* Margin কমানো হয়েছে */
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer .footer-links a:hover {
+    color: #00d4ff; /* Neon Blue Effect */
+    text-decoration: underline;
+}
+
+/* About Us & Contact Us */
+.footer .footer-center a {
+    display: block;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer .footer-center a:hover {
+    color: #ffcc00; /* Neon Yellow Effect */
+}
+
+/* Social Media Icons */
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 10px;
+    font-size: 20px; /* Icon size কমানো হয়েছে */
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.footer .social-icons a:hover {
+    color: #ff4500; /* Orange Neon */
+    transform: scale(1.2); /* Zoom effect */
+}
+
+/* Footer Bottom - Tesla Style */
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    font-size: 12px; /* Font size কমানো হয়েছে */
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 10px; /* Margin কমানো হয়েছে */
+    padding: 10px 0; /* Padding কমানো হয়েছে */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(25, 25, 25, 0.9)); /* Premium Dark Gradient */
+    border-top: 2px solid rgba(255, 255, 255, 0.1); /* Thin Premium Line */
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.footer-bottom:hover {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(35, 35, 35, 1)); /* Smooth Transition */
+    color: #ffffff;
+    letter-spacing: 1.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .footer-left, 
+    .footer .footer-center, 
+    .footer .footer-right {
+        width: 100%;
+        padding: 15px; /* Column padding কমানো হয়েছে */
+    }
+}

@@ -1,0 +1,54 @@
+.popular-routes {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .routes-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+  }
+  
+  .routes-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    text-align: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .location-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .route-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .route-btn {
+    display: block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: red; /* ✅ লাল রঙ */
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.3s;
+  }
+  
+  .route-btn:hover {
+    background-color: darkred;
+  }
+  

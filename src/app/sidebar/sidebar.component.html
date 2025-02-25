@@ -1,0 +1,12 @@
+<button class="menu-btn" (click)="toggleSidebar()">☰ Menu</button>
+<div class="sidebar" [ngClass]="{ 'open': isOpen, 'closed': !isOpen }">
+    <ul>
+        <li><a routerLink="/dashboard">🏠 Dashboard</a></li>
+        <li><a routerLink="/BusBookingList">🚌 BusBookingList</a></li>
+        <li><a routerLink="/flightList">✈️ FlightBookingList</a></li>
+        <li><a routerLink="/ship">🚢 Ship Booking</a></li>
+        <li><a routerLink="/hotel">🏨 Hotel Booking</a></li>
+        <li><a routerLink="/admin-panel">⚙️ Admin Panel</a></li>
+        <li><a routerLink="/profile">👤 Profile</a></li>
+    </ul>
+</div>

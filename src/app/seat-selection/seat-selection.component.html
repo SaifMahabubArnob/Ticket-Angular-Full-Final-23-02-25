@@ -1,0 +1,82 @@
+<div class="seat-selection-container">
+    <h2>Select Your Seats</h2>
+    <p><strong>Bus Name:</strong> {{ selectedBus.name }}</p>
+    <p><strong>Departure:</strong> {{ selectedBus.departure }}</p>
+    <p><strong>Arrival:</strong> {{ selectedBus.arrival }}</p>
+    <p><strong>Base Fare:</strong> ${{ baseFare }}</p>
+    <p><strong>Total Fare:</strong> ${{ totalFare }}</p>
+  
+    <!-- First Name Input -->
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" [(ngModel)]="firstName" />
+  
+    <!-- Last Name Input -->
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" [(ngModel)]="lastName" />
+  
+    <!-- Passenger Type Dropdown -->
+    <label for="passenger-type">Booking For:</label>
+    <select id="passenger-type" [(ngModel)]="passengerType">
+      <option value="Self">Self</option>
+      <option value="Other">Other</option>
+    </select>
+  
+    <!-- Boarding Point Dropdown -->
+    <label for="boarding-point">Boarding Point:</label>
+    <select id="boarding-point" [(ngModel)]="selectedBoardingPoint">
+      <option *ngFor="let point of boardingPoints" [value]="point">{{ point }}</option>
+    </select>
+  
+    <!-- Dropping Point Dropdown -->
+    <label for="dropping-point">Dropping Point:</label>
+    <select id="dropping-point" [(ngModel)]="selectedDroppingPoint">
+      <option *ngFor="let point of droppingPoints" [value]="point">{{ point }}</option>
+    </select>
+  
+    <!-- Mobile Number Input -->
+    <label for="mobile-number">Mobile Number:</label>
+    <input type="text" id="mobile-number" [(ngModel)]="mobileNumber" />
+  
+    <!-- Email Input -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" />
+  
+    <!-- Gender Input -->
+    <label for="gender">Gender:</label>
+    <select id="gender" [(ngModel)]="gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+
+
+<!-- Booking Date Field (Visible for Information) -->
+<p><strong>Booking Date:</strong> {{ bookingDate | date:'medium' }}</p>
+
+
+
+
+  
+    <!-- Seat Selection Grid -->
+    <div class="seat-grid">
+      <div
+        *ngFor="let seat of seats"
+        class="seat"
+        [class.selected]="seat.isSelected"
+        (click)="selectSeat(seat)"
+      >
+        {{ seat.id }}
+      </div>
+    </div>
+  
+    <div class="selected-seats">
+      <h3>Selected Seats:</h3>
+      <p *ngIf="selectedSeats.length === 0">No seats selected.</p>
+      <ul>
+        <li *ngFor="let seat of selectedSeats">Seat {{ seat.id }}</li>
+      </ul>
+    </div>
+  
+    <!-- Proceed Button -->
+    <button class="proceed-btn" (click)="proceedBooking()">Proceed</button>
+  </div>

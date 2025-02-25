@@ -1,0 +1,48 @@
+/* frontend/src/app/components/hotel-list/hotel-list.component.css */
+
+/* মূল কন্টেইনারের স্টাইল */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none; /* ডিফল্ট বুলেট রিমুভ করা */
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* হোভার এফেক্টের জন্য ট্রানজিশন */
+  }
+  
+  li:hover {
+    background-color: #e9ecef;
+    transform: scale(1.02); /* হোভার করলে সামান্য বড় হবে */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* হোভারে ছায়া যোগ করা */
+  }
+  
+  li span {
+    font-weight: bold;
+    color: #007bff; /* হোটেলের নামের জন্য ব্লু কালার */
+  }
+  
+  /* রেসপন্সিভ ডিজাইন */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    li {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }

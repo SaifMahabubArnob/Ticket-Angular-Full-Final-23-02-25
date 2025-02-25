@@ -1,0 +1,10 @@
+<!-- frontend/src/app/components/hotel-detail/hotel-detail.component.html -->
+<h1>{{ hotel?.name }}</h1>
+<img [src]="hotel?.imageUrl" alt="{{ hotel?.name }}" />
+<p><strong>Description:</strong> {{ hotel?.description }}</p>
+<p><strong>Location:</strong> {{ hotel?.location }}</p>
+<p><strong>Price per night:</strong> ${{ hotel?.pricePerNight }}</p>
+<p><strong>Available Rooms:</strong> {{ hotel?.availableRooms }}</p>
+
+<!-- Booking Form -->
+<app-booking-form [hotelId]="hotel?.id"></app-booking-form>

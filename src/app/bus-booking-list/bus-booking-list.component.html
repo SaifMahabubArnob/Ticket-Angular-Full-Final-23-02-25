@@ -1,0 +1,37 @@
+<div class="container">
+    <h2 style="text-align: center;">Bus Booking List</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Journey Date</th>
+          <th>Time</th>
+          <th>Seats</th>
+          <th>Bus Class</th>
+          <th>Passenger Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Age Group</th>
+          <th>Fare</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ booking.fromLocation }}</td>
+          <td>{{ booking.toLocation }}</td>
+          <td>{{ booking.journeyDate | date:'yyyy-MM-dd' }}</td>
+          <td>{{ booking.journeyTime }}</td>
+          <td>{{ booking.seats }}</td>
+          <td>{{ booking.busClass }}</td>
+          <td>{{ booking.passengerName }}</td>
+          <td>{{ booking.phone }}</td>
+          <td>{{ booking.email }}</td>
+          <td>{{ booking.ageGroup }}</td>
+          <td>{{ booking.fare }} BDT</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

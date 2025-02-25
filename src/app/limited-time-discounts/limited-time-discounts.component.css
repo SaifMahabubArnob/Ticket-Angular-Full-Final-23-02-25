@@ -1,0 +1,49 @@
+.limited-time-discounts {
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  .limited-time-discounts h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .deals-carousel {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .deal-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+  }
+  
+  .deal-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .deal-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .deal-card button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .deal-card button:hover {
+    background-color: #0056b3;
+  }
+  

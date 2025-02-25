@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333333;
+    line-height: 1.6;
+  }
+  
+  /* Admin Panel Container */
+  .admin-panel-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  /* Heading Styling */
+  h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 800px; /* Ensures table doesn't shrink too much on small screens */
+  }
+  
+  thead {
+    background-color: #007bff; /* Blue header for contrast */
+    color: #ffffff;
+  }
+  
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #dddddd;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  th {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  td {
+    font-size: 14px;
+    color: #555555;
+  }
+  
+  /* Zebra Striping for Rows */
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+  }
+  
+  /* Hover Effect for Rows */
+  tbody tr:hover {
+    background-color: #f1f1f1; /* Slightly darker gray on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .admin-panel-container {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    th,
+    td {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }

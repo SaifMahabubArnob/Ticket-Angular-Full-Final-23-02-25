@@ -1,0 +1,105 @@
+<div class="form-container">
+    <h2>Book a Flight</h2>
+    <form [formGroup]="flightForm" (ngSubmit)="submitForm()">
+  
+      <!-- Trip Type -->
+      <div class="trip-type">
+        <label>Trip Type:</label>
+        <label>
+          <input type="radio" formControlName="tripType" value="oneWay" (click)="toggleReturnDate()"> One-Way
+        </label>
+        <label>
+          <input type="radio" formControlName="tripType" value="roundTrip" (click)="toggleReturnDate()"> Round-Trip
+        </label>
+      </div>
+  
+      <!-- From Location -->
+      <label>From:</label>
+      <input type="text" formControlName="fromLocation" placeholder="From" required>
+  
+      <!-- To Location -->
+      <label>To:</label>
+      <input type="text" formControlName="toLocation" placeholder="To" required>
+  
+      <!-- Journey Date -->
+      <label>Journey Date:</label>
+      <input type="date" formControlName="journeyDate" required>
+  
+      <!-- Return Date -->
+      <div *ngIf="isReturnDateVisible">
+        <label>Return Date:</label>
+        <input type="date" formControlName="returnDate">
+      </div>
+  
+      <!-- Arrival Time -->
+      <label>Arrival Time:</label>
+      <input type="time" formControlName="arrivalTime" required>
+  
+      <!-- Passenger Type -->
+      <label>Passenger Type:</label>
+      <select formControlName="passengerType">
+        <option value="Adult">Adult</option>
+        <option value="Child">Child</option>
+        <option value="Infant">Infant</option>
+      </select>
+  
+      <!-- Number of Passengers -->
+      <label>Number of Passengers:</label>
+      <input type="number" formControlName="passengerCount" min="1" required>
+  
+      <!-- Meal Preferences -->
+      <label>Meal Preference:</label>
+      <select formControlName="mealPreference">
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Non-Vegetarian">Non-Vegetarian</option>
+        <option value="Vegan">Vegan</option>
+      </select>
+  
+      <!-- Preferred Class -->
+      <label>Preferred Class:</label>
+      <select formControlName="classType">
+        <option value="Economy">Economy</option>
+        <option value="Business">Business</option>
+        <option value="First">First Class</option>
+      </select>
+  
+      <!-- Travel Insurance -->
+      <label>
+        <input type="checkbox" formControlName="insurance"> Add Travel Insurance
+      </label>
+  
+      <!-- Discount Coupons -->
+      <label>Enter Promo Code:</label>
+      <input type="text" formControlName="couponCode" placeholder="Enter Promo Code">
+  
+      <!-- Airline Selection -->
+      <label>Airline:</label>
+      <select formControlName="airline" (change)="calculateFare()" required>
+        <option value="">Select Airline</option>
+        <option value="American Airlines">American Airlines</option>
+        <option value="Indian Airlines">Indian Airlines</option>
+        <option value="Canadian Airlines">Canadian Airlines</option>
+        <option value="France Airlines">France Airlines</option>
+        <option value="Australia Airlines">Australia Airlines</option>
+        <option value="Bangladesh Airlines">Bangladesh Airlines</option>
+        <option value="Thailand Airlines">Thailand Airlines</option>
+        <option value="Malaysia Airlines">Malaysia Airlines</option>
+        <option value="Singapore Airlines">Singapore Airlines</option>
+      </select>
+  
+      <!-- Ticket Price -->
+      <label>Ticket Price:</label>
+      <input type="number" formControlName="ticketPrice" readonly>
+  
+      <!-- Payment Method -->
+      <label>Payment Method:</label>
+      <select formControlName="paymentMethod" required>
+        <option value="creditCard">Credit Card</option>
+        <option value="paypal">PayPal</option>
+        <option value="googlePay">Google Pay</option>
+      </select>
+  
+      <button type="submit" [disabled]="flightForm.invalid">Search Flights</button>
+    </form>
+  </div>
+  

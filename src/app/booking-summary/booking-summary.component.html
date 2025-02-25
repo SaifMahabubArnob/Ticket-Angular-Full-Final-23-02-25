@@ -1,0 +1,16 @@
+<div class="booking-summary-container">
+    <h2>Booking Summary</h2>
+    <p><strong>Bus Name:</strong> {{ bookingDetails.busName }}</p>
+    <p><strong>Departure:</strong> {{ bookingDetails.departure }}</p>
+    <p><strong>Arrival:</strong> {{ bookingDetails.arrival }}</p>
+    <p><strong>Total Fare:</strong> ${{ bookingDetails.fare }}</p>
+    <p><strong>Boarding Point:</strong> {{ bookingDetails.boardingPoint }}</p>
+    <p><strong>Dropping Point:</strong> {{ bookingDetails.droppingPoint }}</p>
+    <p><strong>Mobile Number:</strong> {{ bookingDetails.mobileNumber }}</p>
+    <p><strong>Email:</strong> {{ bookingDetails.email }}</p>
+    <p><strong>Gender:</strong> {{ bookingDetails.gender }}</p>
+    <p><strong>First Name:</strong> {{ bookingDetails.firstName }}</p>
+    <p><strong>Last Name:</strong> {{ bookingDetails.lastName }}</p>
+    <p><strong>Passenger Type:</strong> {{ bookingDetails.passengerType }}</p>
+    <p><strong>Selected Seats:</strong> {{ bookingDetails.selectedSeats.join(', ') }}</p>
+  </div>

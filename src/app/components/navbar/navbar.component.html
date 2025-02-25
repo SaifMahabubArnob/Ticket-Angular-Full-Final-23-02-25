@@ -1,0 +1,85 @@
+<!-- navbar.component.html -->
+<div class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #f8f9fa;">
+    <!-- Logo Section -->
+    <div class="logo">
+        <img src="https://bdtickets.com/images/alt-logo-new.png" alt="BDTickets Logo" style="width: 120px; height: auto;">
+    </div>
+    
+   <!-- Menu Section -->
+<a href="#" (click)="showForm('bus')" style="display: flex; align-items: center;">
+    <img src="https://cdn-icons-png.freepik.com/256/11202/11202927.png?ga=GA1.1.523451695.1738836111&semt=ais_hybrid" alt="Bus Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+    Bus
+</a>
+
+
+        <a href="#" (click)="showForm('air')" style="display: flex; align-items: center;">
+            <img src="https://cdn-icons-png.freepik.com/256/3694/3694605.png?ga=GA1.1.523451695.1738836111&semt=ais_hybrid" alt="Air Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+            Air
+        </a>
+        <a href="#" (click)="showForm('ship')" style="display: flex; align-items: center;">
+            <img src="https://cdn-icons-png.freepik.com/256/6039/6039334.png?ga=GA1.1.523451695.1738836111&semt=ais_hybrid" alt="Ship Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+            Ship
+        </a>
+        <!-- frontend/src/app/components/navbar/navbar.component.html -->
+<a [routerLink]="['/hotels']" (click)="showForm('hotel')" style="display: flex; align-items: center;">
+    <img src="https://cdn-icons-png.freepik.com/256/16156/16156718.png?ga=GA1.1.523451695.1738836111&semt=ais_hybrid" 
+         style="width: 20px; height: 20px; margin-right: 5px;">
+    Hotel
+</a>
+        <a href="flashDeals.jsp" style="display: flex; align-items: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUSRTM1bd7FxAtG_oIb2qkOf6k4clsodEMWA&s" alt="Deals Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+            Flash Deals
+        </a>
+        <a href="myBooking.jsp" style="display: flex; align-items: center;">
+            <img src="https://cdn-icons-png.freepik.com/256/16356/16356337.png?ga=GA1.1.523451695.1738836111&semt=ais_hybrid" alt="Booking Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+            My Booking
+        </a>
+        <a href="tel:16247" style="display: flex; align-items: center;">
+            <img src="https://cdn-icons-png.freepik.com/256/3711/3711012.png?ga=GA1.1.523451695.1738836111&semt=ais_hybrid" alt="Phone Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+            Call 16247
+        </a>
+        <a href="signUp.jsp" style="display: flex; align-items: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtYnIOM6R6COoA3jzfYzZ4iJJ5hAQg4Al6mg&s" alt="Sign Up Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+            Sign Up
+        </a>
+
+
+        <!-- <a href="/BusBookingList" style="display: flex; align-items: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtYnIOM6R6COoA3jzfYzZ4iJJ5hAQg4Al6mg&s" alt="Sign Up Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+            BusBookingList
+        </a> -->
+
+
+
+        <!-- <a routerLink="/flightList" style="display: flex; align-items: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtYnIOM6R6COoA3jzfYzZ4iJJ5hAQg4Al6mg&s" 
+                 alt="Sign Up Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+            Flight List
+        </a> -->
+        
+
+        <a href="<c:url value='/admin/tickets'/>" style="display: flex; align-items: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI2QRWu5ow1jvU9h3wdv6Z5-tZRepmJ8XDIQ&s" alt="Admin Icon" style="width: 30px; height: 30px; margin-right: 5px;">
+            Admin
+        </a>
+    </div>
+
+<!-- Add this code for form visibility -->
+<div *ngIf="isBusFormVisible">
+    <app-bus-booking-form></app-bus-booking-form>
+  </div>
+  
+
+
+  <!-- ফ্লাইট বুকিং ফর্মের জন্য স্থান -->
+<div *ngIf="isFlightFormVisible">
+  <app-flight-booking-form></app-flight-booking-form>
+
+  </div>
+  
+
+
+  <!-- Ship Booking ফর্ম দেখানোর জন্য স্থান -->
+<div *ngIf="isShipFormVisible">
+    <app-ship-booking-form></app-ship-booking-form>
+</div>

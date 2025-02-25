@@ -1,0 +1,35 @@
+.frequent-routes {
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  .frequent-routes h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .routes-grid {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .route-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+  }
+  
+  .route-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .route-card p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  

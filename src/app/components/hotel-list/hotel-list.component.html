@@ -1,0 +1,13 @@
+<!-- frontend/src/app/components/hotel-list/hotel-list.component.html -->
+<h1>Available Hotels</h1>
+<ul>
+  <li *ngFor="let hotel of hotels" (click)="viewHotelDetails(hotel.id)">
+    <span>{{ hotel.name }}</span> <!-- হোটেলের নাম বোল্ড করা -->
+    <p style="margin: 5px 0; font-size: 0.9rem; color: #555;">{{ hotel.location }}</p> <!-- অবস্থান দেখানো -->
+  </li>
+</ul>
+
+<!-- যদি কোনো হোটেল না থাকে -->
+<div *ngIf="hotels.length === 0" style="text-align: center; color: #888;">
+  <p>No hotels available.</p>
+</div>

@@ -1,0 +1,11 @@
+<section class="popular-routes">
+    <h2>Popular Bus Routes</h2>
+    <ul class="routes-list">
+      <li *ngFor="let route of routes">
+        <img [src]="route.image" [alt]="route.name" class="location-logo">
+        <span class="route-name">{{ route.name }}</span>
+        <a [href]="route.link" class="route-btn">Book Now</a>
+      </li>
+    </ul>
+  </section>
+  

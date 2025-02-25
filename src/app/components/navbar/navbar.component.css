@@ -1,0 +1,87 @@
+  
+	   
+	   /* Navbar Styles */
+	   .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: rgb(0, 128, 255); /* নেভবারের ব্যাকগ্রাউন্ড রং */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+        width: 150px; /* লোগোর আকার */
+        height: auto;
+    }
+
+    /* Menu Styles */
+    .navbar div {
+        display: flex;
+        gap: 60px; /* মেনু আইটেমগুলোর মধ্যে ফাঁকা */
+        align-items: center;
+    }
+
+    .navbar a {
+        display: flex;
+        align-items: center;
+        text-decoration: none; /* আন্ডারলাইন সরানো */
+        color: rgb(0, 128, 0); /* টেক্সটের রং */
+        font-size: 20px; /* ফন্টের আকার */
+        font-family: 'times new roman', sans-serif;
+        font-weight: lighter;
+        font-style: oblique;
+        transition: color 0.3s ease, transform 0.3s ease; /* হোভার ইফেক্ট */
+    }
+
+    .navbar a img {
+        width: 20px; /* আইকনের আকার */
+        height: 20px;
+        margin-right: 15px; /* আইকন এবং টেক্সটের মধ্যে ফাঁকা */
+    }
+
+    
+    
+    
+    .navbar a:hover {
+        background-color: red; /* হোভার করলে লাল রঙের বক্স দেখাবে */
+        color: white; /* টেক্সটের রং পরিবর্তন (ঐচ্ছিক) */
+        transform: scale(1.1); /* সামান্য বড় দেখাবে */
+        padding: 5px; /* বক্সের চারপাশে জায়গা রাখবে */
+        border-radius: 5px; /* বক্সের কোনাগুলো গোল করবে (ঐচ্ছিক) */
+        transition: 0.3s; /* স্মুথ ট্রানজিশন ইফেক্ট */
+    }
+
+    
+    
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column; /* ছোট স্ক্রিনে ভেতরে মেনুগুলো একের পর এক থাকবে */
+            align-items: flex-start;
+        }
+
+        .navbar div {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .navbar a {
+            width: 100%;
+            padding: 10px 15px;
+            background-color: #0056b3;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .navbar a:hover {
+            background-color: #ffdd57;
+            color: #0056b3;
+        }
+    }
+
+    
+    
+    
